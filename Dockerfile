@@ -1,0 +1,9 @@
+FROM node:16
+WORKDIR /app
+ENV GIT_URL $GIT_URL
+ENV GIT_USER $GIT_USER
+ENV GIT_TOKEN $GIT_TOKEN
+
+RUN 'git clone ${GIT_USER}:${GIT_TOKEN}@${GIT_URL}'
+RUN yarn install
+CMD npm run start
