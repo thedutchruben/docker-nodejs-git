@@ -2,7 +2,5 @@ FROM node:16
 WORKDIR /app
 ADD 'run.sh' .
 ENV GIT_URL $GIT_URL
-ENV GIT_USER $GIT_USER
-ENV GIT_TOKEN $GIT_TOKEN
 
 CMD sh run.sh
