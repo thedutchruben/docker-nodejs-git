@@ -1,6 +1,8 @@
 FROM node:16
 WORKDIR /app
-ADD 'run.sh' .
+ADD 'run.sh' /scripts
 ENV GIT_URL $GIT_URL
-
-CMD sh run.sh
+RUN apt update && apt install git -y
+CMD git clone $GIT_URL . && \
+    yarn install && \
+    npm run start
