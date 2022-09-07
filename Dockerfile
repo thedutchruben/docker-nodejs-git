@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install curl gnupg -y \
     && apt-get install google-chrome-stable -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && apt update  \
-    && apt install chromium chromium-l10n
+    && apt install chromium chromium-l10n -y
 CMD rm -rf *  && \
     git clone $GIT_URL . && \
     yarn install && \
