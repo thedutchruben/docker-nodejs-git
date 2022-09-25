@@ -14,5 +14,6 @@ CMD git clone $GIT_URL /tmp/project && \
     mv /tmp/project/* . && \
     yarn install && \
     rm -rf /tmp/project/* && \
+    rm -rf /tmp/project/ && \
     rmdir -r /tmp/project/ && \
     npm run start
