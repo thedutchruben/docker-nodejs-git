@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install curl gnupg -y \
     && apt update  \
     && apt install chromium chromium-l10n -y
 CMD git clone $GIT_URL /tmp/project && \
-    mv /tmp/project/* . && \
+    cp -rlf /tmp/project/* . && \
     yarn install && \
     rm -rf /tmp/project/* && \
     rm -rf /tmp/project/ && \
