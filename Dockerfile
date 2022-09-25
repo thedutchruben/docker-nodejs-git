@@ -1,4 +1,4 @@
-FROM node:18.9.0-alpine3.16
+FROM node:18
 WORKDIR /app
 ENV GIT_URL $GIT_URL
 RUN apt update && apt install -y 
@@ -14,4 +14,5 @@ CMD git clone $GIT_URL /tmp/project && \
     mv /tmp/project/* . && \
     yarn install && \
     rm -rf /tmp/project/* && \
+    rmdir /tmp/project/ && \
     npm run start
