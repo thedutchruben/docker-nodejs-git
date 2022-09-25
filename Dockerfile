@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:18.9.0-alpine3.16
 WORKDIR /app
 ENV GIT_URL $GIT_URL
 RUN apt update && apt install -y 
