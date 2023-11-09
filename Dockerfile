@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:21
 WORKDIR /app
 ENV GIT_URL $GIT_URL
 RUN apt update && apt install -y 
